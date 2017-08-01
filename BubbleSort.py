@@ -5,30 +5,31 @@
 import random
 import time
 
-def bubblesort(list, amount):
 
-    print('Unsorted', amount, 'item list--->', list, '\n')
+def bubble_sort(array, amount):
+    print('Unsorted', amount, 'item array--->', array, '\n')
     start = time.time()
 
-    for x in range(0, len(list) - 1):   # This loop should break prior to final iteration, unless list in sorted in reverse first
+    for x in range(0, len(array) - 1):   # Loop should break prior to final iteration, unless sorted in reverse first
         z = 0
-        for y in range(0, (len(list) - 1) - x):  # Statement (len(sortlist)-1)-x) will decrease sort time each iteration
-            if list[y] > list[y + 1]:
-                list[y], list[y + 1] = list[y + 1], list[y]
+        for y in range(0, (len(array) - 1) - x):  # (len(sortarray)-1)-x) will decrease sort time each iteration
+            if array[y] > array[y + 1]:
+                array[y], array[y + 1] = array[y + 1], array[y]
                 z += 1
         if z == 0:
             finish = time.time()
-            print('Sorted', amount, 'item list--->', list, '\n')
+            print('Sorted', amount, 'item array--->', array, '\n')
             print('Sorting took', finish-start, 'seconds and ', x + 1, 'iterations')
             break
 
+
 def main():
-    list = []
+    array = []
     amount = random.randint(10, 1010)
 
     for i in range(0, amount):
-        list.append(random.randint(0,1000))
+        array.append(random.randint(0, 1000))
 
-    bubblesort(list, amount)
+    bubble_sort(array, amount)
 
 main()
