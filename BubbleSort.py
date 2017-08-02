@@ -2,7 +2,6 @@
 # Author: J. Mayeux - pyRN
 # Date: 7-30-17
 
-import random
 import time
 
 
@@ -21,15 +20,3 @@ def bubble_sort(array, amount):
             print('Sorted', amount, 'item array--->', array, '\n')
             print('Sorting took', finish-start, 'seconds and ', x + 1, 'iterations')
             break
-
-
-def main():
-    array = []
-    amount = random.randint(10, 1010)
-
-    for i in range(0, amount):
-        array.append(random.randint(0, 1000))
-
-    bubble_sort(array, amount)
-
-main()
