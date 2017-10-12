@@ -33,4 +33,4 @@ def comb_sort(array, amount):
 
     finish = time.time()
     print('Sorted', amount, 'item array--->', array, '\n')
-    print('Sorting took', finish - start, 'seconds')
+    print('Sorting took', finish - start, 'seconds', '\n')

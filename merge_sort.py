@@ -30,25 +30,19 @@ def merge_sort(left, right):
             j = j+1
     sorted_array += left[i:]
     sorted_array += right[j:]
-    print(sorted_array)
     return sorted_array
 
 
-def main():
+def main(array, amount):
     print('*' * 50)
     print('Merge Sort'.center(50))
     print('*' * 50, '\n')
-    #print('Unsorted', amount, 'item array--->', array, '\n')
-    array = [779, 167, 264, 237, 29, 578, 987, 729, 70, 744, 929, 553, 107, 244, 210, 118, 581, 404]
     start = time.time()
 
     split_array(array.copy())
 
     finish = time.time()
-
-    #print('Sorted', amount, 'item array--->', array, '\n')
-    print('Sorting took', finish - start, 'seconds', '\n')
-
-main()
+    print('Sorting of a ', amount, 'array took', finish - start, 'seconds', '\n')
+    # Need to figure out how to print sorted array for this algorithm.
 
 
